@@ -22,7 +22,9 @@ res.status(201).send(observacoesDoLembrete)
 
 //localhost:5000/lembretes/:id/observacoes
 app.get('/lembretes/:id/observacoes' , (req,res) => {
-
+app.get('/lembretes/:id/observacoes' , (req, res)=> {
+    res.send(observacoesPorLembreteId[req.params.id] || [] )
+})
 })
 
 app.listen(5000, () => console.log('Observacoes. Porta 5000.'))
