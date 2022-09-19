@@ -14,7 +14,7 @@ app.post('/lembrete/:id/observacoes', (req, res) =>{
 //req.params é um objeto que representa os parametros da requisição
 //o nome id representa o id contido na url, req,params.id
 const observacoesDoLembrete = observacoesPorLembreteId[req.params.id] || []
-observacoesDoLembrete.push({id: idObs, texto: texto: texto})
+observacoesDoLembrete.push({id: idObs, texto: texto})
 observacoesPorLembreteId[req.params.id] = observacoesDoLembrete
 //201: Created
 res.status(201).send(observacoesDoLembrete)
